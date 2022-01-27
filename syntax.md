@@ -1,15 +1,15 @@
 ## Syntax
 Since Lua++ is an upgrade of lua, the majority of it's syntax comes from [Lua 5.1](https://www.lua.org/manual/5.1/). Please refer to it's manual for detailed documentation.
 
-* [Compound assignments](https://github.com/luapp-org/Documentation/blob/main/README.md#compound-assignments)
-* [Postfix operators](https://github.com/luapp-org/Documentation/blob/main/README.md#postfix-operators)
-* [Continue statement](https://github.com/luapp-org/Documentation/blob/main/README.md#continue-statement)
-* [Constant variables](https://github.com/luapp-org/Documentation/blob/main/README.md#continue-statement)
-* [Type annotations](https://github.com/luapp-org/Documentation/blob/main/README.md#type-annotations)
-* [Classes](https://github.com/luapp-org/Documentation/blob/main/README.md#classes)
-* [Constructors](https://github.com/luapp-org/Documentation/blob/main/README.md#constructors)
-* [Events](https://github.com/luapp-org/Documentation/blob/main/README.md#events)
-* [Macros](https://github.com/luapp-org/Documentation/blob/main/README.md#macros)
+* [Compound assignments](http://www.luaplusplus.org/syntax.html#compound-assignments)
+* [Postfix operators](http://www.luaplusplus.org/syntax.html#postfix-operators)
+* [Continue statement](http://www.luaplusplus.org/syntax.html#continue-statement)
+* [Constant variables](http://www.luaplusplus.org/syntax.html#continue-statement)
+* [Type annotations](http://www.luaplusplus.org/syntax.htmltype-annotations)
+* [Classes](http://www.luaplusplus.org/syntax.html#classes)
+* [Constructors](http://www.luaplusplus.org/syntax.html#constructors)
+* [Events](http://www.luaplusplus.org/syntax.html#events)
+* [Macros](http://www.luaplusplus.org/syntax.html#macros)
 
 <br/>
 
