@@ -134,7 +134,6 @@ class [tag [template-spec] : [base-list]] {
   member-list
 }
 ```
-**Parameters**
 
 | Keyword         | Description                                                   |
 |:----------------|:--------------------------------------------------------------|
