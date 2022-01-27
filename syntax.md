@@ -136,7 +136,7 @@ class [tag [template-spec] : [base-list]] {
 ```
 **Parameters**
 | Keyword         | Description                                                   |
-|-----------------|---------------------------------------------------------------|
+|:----------------|:--------------------------------------------------------------|
 | *tag*           | The type name given to the class.                             |
 | *template-spec* | Optional template specifications.                             |
 | *base-list*     | Optional list of classes this class will derive members from. |
