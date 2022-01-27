@@ -1,12 +1,3 @@
-# Documentation
-This is the primitive documentation page for Lua++. Once I get a new idea for the language, I add it here so that I can keep of my thoughts.
-
-I can't guarantee that the language will have all of these features, but it will incorparate the general concepts (I might make some last minute changes).
-
-* [Syntax](https://github.com/luapp-org/Documentation/blob/main/README.md#syntax)
-* [Semantics](https://github.com/luapp-org/Documentation/blob/main/README.md#semantics)
-* [Linting](https://github.com/luapp-org/Documentation/blob/main/README.md#Linting)
-
 ## Syntax
 Since Lua++ is an upgrade of lua, the majority of it's syntax comes from [Lua 5.1](https://www.lua.org/manual/5.1/). Please refer to it's manual for detailed documentation.
 
