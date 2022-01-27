@@ -1,12 +1,12 @@
 ## Semantics
 Lua++ has a powerful and safe semantics (type-checking) engine, that makes sure that the developer doesn't accidentally screw up types somewhere in their program.
 
-* [Primitive types](https://github.com/luapp-org/Documentation/blob/main/README.md#primitive-types)
-  * [Integer](https://github.com/luapp-org/Documentation/blob/main/README.md#integer) 
-  * [String](https://github.com/luapp-org/Documentation/blob/main/README.md#string)
-  * [Boolean](https://github.com/luapp-org/Documentation/blob/main/README.md#boolean)
-  * [Table](https://github.com/luapp-org/Documentation/blob/main/README.md#table)
-  * [Function](https://github.com/luapp-org/Documentation/blob/main/README.md#function)
+* [Primitive types](http://www.luaplusplus.org/semantics.html#primitive-types)
+  * [Integer](http://www.luaplusplus.org/semantics.html#integer) 
+  * [String](http://www.luaplusplus.org/semantics.html#string)
+  * [Boolean](http://www.luaplusplus.org/semantics.html#boolean)
+  * [Table](http://www.luaplusplus.org/semantics.html#table)
+  * [Function](http://www.luaplusplus.org/semantics.html#function)
 
 <br/>
 
