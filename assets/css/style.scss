@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+h3.a:hover, h3.a:focus {
+  color: black;
+  font-weight: bold;
+}
+
+h3.a {
+  color: black;
+  text-decoration: none;
+}
