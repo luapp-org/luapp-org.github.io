@@ -68,15 +68,15 @@ blockquote {
 }
 
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color: #333333;
+  font-family:Consolas, Bitstream Vera Sans Mono, Lucida Console, Terminal, Monoco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  color: #cccccc;
 }
 
 pre {
   padding:8px 15px;
-  background:	#080808;
+  background: #1e1e1e;
   border-radius:5px;
-  border:1px solid #66727f;
+  border:1px solid #1e1e1e;
   overflow-x: auto;
 }
 
