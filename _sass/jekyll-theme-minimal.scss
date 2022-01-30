@@ -69,14 +69,14 @@ blockquote {
 
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color: var(--clr-code-text);
+  color: #333333;
 }
 
 pre {
   padding:8px 15px;
-  background: var(--clr-code-bg);
+  background:	#080808;
   border-radius:5px;
-  border:1px solid var(--clr-code-border);
+  border:1px solid #66727f;
   overflow-x: auto;
 }
 
@@ -88,16 +88,16 @@ table {
 th, td {
   text-align:left;
   padding:5px 10px;
-  border-bottom:1px solid var(--clr-splitter-blockquote-and-section);
+  border-bottom:1px solid #262626;
 }
 
 dt {
-  color:var(--clr-table-header-and-dt);
+  color: #e6e6e6;
   font-weight:700;
 }
 
 th {
-  color:var(--clr-table-header-and-dt);
+  color: #e6e6e6;
 }
 
 img {
@@ -105,12 +105,12 @@ img {
 }
 
 kbd {
-  background-color: var(--clr-kbd-bg) ;
-  border: 1px solid var(--clr-kbd-border);
-  border-bottom-color: var(--clr-kbd-border-bottom-and-shadow);
+  background-color: #394d60;
+  border: 1px solid #66727f;
+  border-bottom-color: #838c96;
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 var(--clr-kbd-border-bottom-and-shadow);
-  color: var(--clr-kbd-text);
+  box-shadow: inset 0 -1px 0 #838c96;
+  color: #ffffff;
   display: inline-block;
   font-size: 11px;
   line-height: 10px;
@@ -228,7 +228,7 @@ footer {
   }
 
   section {
-    border:1px solid var(--clr-splitter-blockquote-and-section);
+    border:1px solid #262626;
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
