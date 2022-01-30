@@ -57,7 +57,7 @@ print("Lua++ is the best language:", myBool)
 #### Table
 Tables in Lua++ are a lot different, since they served as a hacky replacement for OOP in Lua. In Lua++ tables function more like dictionaries or hashtables in C#, C, or Java; a key value pair. The following example displays how a ```table``` may be used in a Lua++ program.
 ```lua
-// KEY: Name, VALUE: Id
+-- KEY: Name, VALUE: Id
 local users: table<string, integer> = { 
   { "John Doe", 17362 },
   { "Jane Doe", 99999 }
