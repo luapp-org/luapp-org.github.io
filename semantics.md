@@ -55,10 +55,10 @@ print("Lua++ is the best language:", myBool)
 ```
 
 #### Table
-Tables in Lua++ are a lot different, since they served as a hacky replacement for OOP in Lua. In Lua++ tables function more like dictionaries or hashtables in C#, C, or Java; a key value pair. The following example displays how a ```table``` may be used in a Lua++ program.
+Tables in Lua++ are a lot different, since they served as a hacky replacement for OOP in Lua. In Lua++ tables function more like dictionaries or hashtables in C#, C, or Java; a key value pair. The following example displays how a ```Table``` may be used in a Lua++ program.
 ```lua
 -- KEY: Name, VALUE: Id
-local users: table<string, integer> = { 
+local users: Table<string, integer> = { 
   { "John Doe", 17362 },
   { "Jane Doe", 99999 }
 }
@@ -74,4 +74,23 @@ print("Name: Jane Doe ", "Id:", users["Jane Doe"])
 ```
 Name: John Doe  Id: 17362
 Name: Jane Doe  Id: 0
+```
+
+#### Array
+Arrays are still quite similar to basic arrays in Lua but in Lua++ they serve as classes. They still have all the original functions but the syntax is a little different.
+```lua
+local list: Array<number> = { 1, 2, 3 }
+
+-- You can easily iterate through them, there is no need to call ipairs/pairs
+for n in list do
+ print("List item: " + n)
+end
+
+```
+
+**Output**
+```
+1
+2
+3
 ```
