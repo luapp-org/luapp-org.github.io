@@ -5,7 +5,7 @@ Since Lua++ is an upgrade of lua, the majority of it's syntax comes from [Lua 5.
 * [Postfix operators](http://www.luaplusplus.org/syntax.html#postfix-operators)
 * [Continue statement](http://www.luaplusplus.org/syntax.html#continue-statement)
 * [Constant variables](http://www.luaplusplus.org/syntax.html#continue-statement)
-* [Type annotations](http://www.luaplusplus.org/syntax.htmltype-annotations)
+* [Type annotations](http://www.luaplusplus.org/syntax.html#type-annotations)
 * [Classes](http://www.luaplusplus.org/syntax.html#classes)
 * [Constructors](http://www.luaplusplus.org/syntax.html#constructors)
 * [Events](http://www.luaplusplus.org/syntax.html#events)
@@ -88,7 +88,7 @@ print(a)
 ```
 Constant functions can only consist of a ```return``` statement which would be guided by an arrow (```->```):
 ```lua
-const function add(x, y): integer ->
+const function add(x, y): number ->
   return x + y
   
 print(add(1, 2))
@@ -99,28 +99,28 @@ print(add(1, 2))
 ### Type annotations
 Types can be declared for local variables, constant variables, function arguments, and function return types by a ```:``` seperator. 
 
-Lua++ only supports three primitive types, ```boolean```, ```string```, and ```integer``` for simplicity. Here is a simple example of type annotation:
+Lua++ only supports three primitive types, ```boolean```, ```string```, and ```number``` for simplicity. Here is a simple example of type annotation:
 
 ```lua
-function foo(a: integer): boolean
-  local b: integer = a + 2
+function foo(a: number): boolean
+  local b: number = a + 2
   return b == 3
 end
 ```
 To specify multiple return types for a function, seperate each type name with a ```,```:
 
 ```lua
-function foo(a: integer): integer, string
+function foo(a: number): number, string
   return a * 2, tostring(a * 2)
 end
 ```
 To define a function as a type, by wrapping the function argument types with ```()``` and return type with ```:```. Example:
 
 ```lua
-local func: (integer, string): boolean
+local func: (number, string): boolean
 
-func = function(x: integer, y: string): boolean
-  return x == tointeger(y)
+func = function(x: number, y: string): boolean
+  return x == number(y)
 end
 ```
 
@@ -145,14 +145,14 @@ class [tag [template-spec] : [base-list]] {
 Here is an example of class usage in Lua++ to calculate the area of a triangle:
 ```ts
 class Triangle {
-  b: integer,
-  h: integer,
+  b: number,
+  h: number,
   
-  constructor(b: integer, h: integer)
+  constructor(b: number, h: number)
     self.b, self.h = b, h
   end,
   
-  const function area(): integer ->
+  const function area(): number ->
     return (self.b * self.h) / 2.0
 }
 
@@ -170,7 +170,7 @@ class Pair<T1, T2> {
   end
 }
 
-local pair: Pair<integer, string> = { 3, "Three" }
+local pair: Pair<number, string> = { 3, "Three" }
 ```
 
 <br/>
@@ -179,9 +179,9 @@ local pair: Pair<integer, string> = { 3, "Three" }
 Similar to C++, Lua++ has two types of constructors, ```implicit``` and explicit constructors. An ```implicit``` constructor will called whenever a variable with it's type is assigned to a value:
 ```ts
 class Number {
-  num: integer,
+  num: number,
   
-  implicit constructor(num: integer)
+  implicit constructor(num: number)
     self.num = num
   end
 }
@@ -192,9 +192,9 @@ local number: Number = 1
 A custructor is explicit at default, meaning you need to explicitly call the custructor when you are trying to create a new instance of a class.
 ```ts
 class Number {
-  num: integer,
+  num: number,
   
-  constructor(num: integer)
+  constructor(num: number)
     self.num = num
   end
 }
@@ -243,7 +243,7 @@ end
 ### Macros
 Currently, there is only one macro planned for Lua++, the ```--!strict``` macro which tells the compiler to enable strict type checking within the program. This means that lua compatibility will be extreamly limited, since the compiler will begin throwing errors if you don't specify the type of a variable. Enabling this feature forces cleaner and efficient code. An example is shown below:
 ```lua
-local a: integer = 12 -- no compiler error
+local a: number = 12 -- no compiler error
 
 local b = 12 -- compiler error
 ```
