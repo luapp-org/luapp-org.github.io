@@ -2,7 +2,7 @@
 Lua++ has a powerful and safe semantics (type-checking) engine, that makes sure that the developer doesn't accidentally screw up types somewhere in their program.
 
 * [Primitive types](http://www.luaplusplus.org/semantics.html#primitive-types)
-  * [Integer](http://www.luaplusplus.org/semantics.html#integer) 
+  * [Number](http://www.luaplusplus.org/semantics.html#number) 
   * [String](http://www.luaplusplus.org/semantics.html#string)
   * [Boolean](http://www.luaplusplus.org/semantics.html#boolean)
   * [Table](http://www.luaplusplus.org/semantics.html#table)
@@ -11,28 +11,28 @@ Lua++ has a powerful and safe semantics (type-checking) engine, that makes sure 
 <br/>
 
 ### Primitive types
-Lua++ has a completely different type system then Lua. As of now Lua++ supports ```5``` primitive types: ```integer```, ```string```, ```boolean```, ```function```, and ```table```. Each of these can be annotated in their own little way. Refer to the example below:
+Lua++ has a completely different type system then Lua. As of now Lua++ supports ```5``` primitive types: ```number```, ```string```, ```boolean```, ```function```, and ```table```. Each of these can be annotated in their own little way. Refer to the example below:
 ```lua
-local a: integer = 1
+local a: number = 1
 local b: string = "my string"
 local c: boolean = true
 
-local myTable: table<integer, string> = { 
+local myTable: table<number, string> = { 
   { 1, "value" } 
 }
 
-local myFunc: (string, integer) -> boolean = function(a: string, b: integer) -> boolean
+local myFunc: (string, number) -> boolean = function(a: string, b: number) -> boolean
   return a == "hey" and b == 1
 end
 ```
 
 <br/>
 
-#### Integer
-The ```integer``` data type in Lua++ is equivalent to a 32 bit integer. It has a range from -2,147,483,648 (2^31) to 2,147,483,647 (2^31 - 1). Optimizations in the Lua++ compiler may identify and integer as a smaller datatype, but as a developer, you won't have to worry about that.
+#### Number
+The ```number``` data type in Lua++ is equivalent to a 32 bit float or an integer. It has a range from -2,147,483,648 (2^31) to 2,147,483,647 (2^31 - 1). Optimizations in the Lua++ compiler may identify and integer as a smaller datatype, but as a developer, you won't have to worry about that.
 ```lua
-local intMax: integer = 2,147,483,647
-local intMin: integer = -2,147,483,648
+local intMax: number = 2,147,483,647
+local intMin: number = -2,147,483,648
 
 print("MAX_INT: " .. intMax)
 print("MIN_INT: " .. intMin)
