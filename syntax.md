@@ -14,7 +14,7 @@ Since Lua++ is an upgrade of lua, the majority of it's syntax comes from [Lua 5.
 <br/>
 
 ### Compound assignments
-Unlike Lua, Lua++ allows compound assignments with the following operators: ```+=```, ```-=```, ```*=```, ```/=```, ```%=```, ```^=```, and  ```..=```. Just like normal assignmens these are statements, not expressions. Here is an example with some of these operators in use:
+Unlike Lua, Lua++ allows compound assignments with the following operators: ```+=```, ```-=```, ```*=```, ```/=```, ```%=```, ```^=```, and  ```..=```. Just like normal assignments, these are statements, not expressions. Here is an example with some of these operators in use:
 
 ```lua
 local a = 1
@@ -32,16 +32,16 @@ while a > 10 do
 <br/>
 
 ### Postfix operators
-> Postfix operators have been temporarily disabled due to them interfering with standard lua comments. I have
+> Postfix operators have been temporarily disabled due to their interference with standard lua comments. We have
 > yet to find a good workaround
 
-Lua++ has two postfix operators, the post-increment and post-decrement operators. These operators can be used as expressions or statements. Here is an example of the post-increment operator in use:
+Lua++ has two postfix operators: the post-increment and post-decrement operators. These operators can be used as expressions or statements. Here is an example of the post-increment operator in use:
 
 ```lua
 local x = 10
 local a = x++   
 ```
-The value of ```a``` will be 10 because the value of ```x``` is assigned to ```a``` and then ```x``` is incremented.
+The value of ```a``` will be 10 because the value of ```x``` is assigned to ```a``` before it is incremented.
 
 And an example of the post-decrement operator in use:
 
@@ -49,12 +49,12 @@ And an example of the post-decrement operator in use:
 local x = 10
 local a = x--   
 ```
-The value of ```a``` will be 10 because the value of ```x``` is assigned to ```a``` and then ```x``` is decremented.
+The value of ```a``` will be 10 because the value of ```x``` is assigned to ```a``` before it is decremented.
 
 <br/>
 
 ### Continue statement
-Similar to the ```break``` statement, Lua++ supports the ```continue``` statement. It can only be used within a loop and must be the last statement in the block:
+Similar to the ```break``` statement, Lua++ supports the ```continue``` statement. It can only be used within a loop and must be the last statement in a block:
 
 ```lua
 local a = 0
@@ -67,7 +67,7 @@ while a < 5 do
    a++
 end
 ```
-If ```continue``` is used in a ```repeat ... until``` loop, it may not skip the local variable used in the loop condition. Code like this is invalid and will throw and error at compile time:
+If ```continue``` is used in a ```repeat ... until``` loop, it may not skip the local variable used in the loop condition. Code like this is invalid and will throw an error at compile time:
 
 ```lua
 repeat
@@ -79,7 +79,7 @@ until a > 0
 <br/>
 
 ### Constant variables
-The ```const``` keyword specifies that a variable's value is constant and tells the compiler to prevent the programmer from modifying it. Constant variables can only be referenced and not modified. Example:
+The ```const``` keyword specifies that a variable's value is constant and tells the compiler to prevent the programmer from modifying it. Constant variables can only be referenced, not modified. Example:
 
 ```lua
 const a = 12
@@ -97,9 +97,9 @@ print(add(1, 2))
 <br/>
 
 ### Type annotations
-Types can be declared for local variables, constant variables, function arguments, and function return types by a ```:``` seperator. 
+Types can be declared for local variables, constant variables, function arguments, and function return types using the ```:``` seperator. 
 
-Lua++ only supports three primitive types, ```boolean```, ```string```, and ```number``` for simplicity. Here is a simple example of type annotation:
+Lua++ only supports three primitive data types: ```boolean```, ```string```, and ```number``` for simplicity. Here is a simple example of type annotation:
 
 ```lua
 function foo(a: number): boolean
@@ -107,14 +107,14 @@ function foo(a: number): boolean
   return b == 3
 end
 ```
-To specify multiple return types for a function, seperate each type name with a ```,```:
+To specify multiple return types for a function, seperate each type name with a ```,``` :
 
 ```lua
 function foo(a: number): number, string
   return a * 2, tostring(a * 2)
 end
 ```
-To define a function as a type, by wrapping the function argument types with ```()``` and return type with ```:```. Example:
+To define a function as a type, wrap the function argument type(s) with ```()``` and return type(s) with ```:```. Example:
 
 ```lua
 local func: (number, string): boolean
@@ -159,7 +159,7 @@ class Triangle {
 print(Triangle(3, 4).area())
 ```
 
-Templating in Lua++ is quite simple compared to other languages. It works like so: ```tag<T>```. For multiple types, you would make a list of T's: ```tag<T1, T2, ...>```. A simple example of templating is attached below:
+Templating in Lua++ is quite simple compared to other languages. It works like so: ```tag<T>```. For multiple types, you would make a list of T's: ```tag<T1, T2, ...>```. A simple example of templating is shown below:
 ```ts
 class Pair<T1, T2> {
   first: T1,
@@ -176,7 +176,7 @@ local pair: Pair<number, string> = { 3, "Three" }
 <br/>
 
 ### Constructors
-Similar to C++, Lua++ has two types of constructors, ```implicit``` and explicit constructors. An ```implicit``` constructor will called whenever a variable with it's type is assigned to a value:
+Similar to C++, Lua++ has two types of constructors, ```implicit``` and explicit constructors. An ```implicit``` constructor will be called whenever a variable with it's type is assigned to a value:
 ```ts
 class Number {
   num: number,
@@ -189,7 +189,7 @@ class Number {
 local number: Number = 1
 ```
 
-A custructor is explicit at default, meaning you need to explicitly call the custructor when you are trying to create a new instance of a class.
+A custructor is explicit by default, meaning you need to explicitly call a custructor when you are trying to create a new instance of a class.
 ```ts
 class Number {
   num: number,
@@ -218,7 +218,7 @@ class Publisher {
 }
 ```
 
-An ```event``` functions similarly to a function. If you wanted to call a function every time the ```SampleEvent``` is invoked you would need to use the ```+=``` operator to assign a function to the event (multiple may be assigned). Here is an example:
+An ```event``` functions similarly to a function. If you wanted to call a function every time the ```SampleEvent``` is invoked, you would need to use the ```+=``` operator to assign the function to that event (multiple may be assigned). Here is an example:
 ```lua
 function OnInvoked(sender, text: string)
   print("SampleEvent has been invoked!")
@@ -229,7 +229,7 @@ local publisher: Publisher = Publisher()
 publisher.SampleEvent += OnInvoked
 ```
 
-Anonymous functions can be used aswell: 
+Anonymous functions can be used as well: 
 ```lua
 local publisher: Publisher = Publisher()
 
@@ -241,7 +241,7 @@ end
 <br/>
 
 ### Macros
-Currently, there is only one macro planned for Lua++, the ```--!strict``` macro which tells the compiler to enable strict type checking within the program. This means that lua compatibility will be extreamly limited, since the compiler will begin throwing errors if you don't specify the type of a variable. Enabling this feature forces cleaner and efficient code. An example is shown below:
+Currently, there is only one macro planned for Lua++, the ```--!strict``` macro. This tells the compiler to enable strict type checking within the program. This means that lua compatibility will be extremely limited, since the compiler will begin throwing errors if you don't specify the type of a variable. Enabling this feature forces cleaner and more efficient code. An example is shown below:
 ```lua
 local a: number = 12 -- no compiler error
 
