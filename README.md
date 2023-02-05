@@ -1,4 +1,1 @@
-# Lua++ Website Repository
-This is the Lua++ website repository hosted by GitHub pages. 
-
-Maybe use: https://tailwindui.com/templates/syntax??
+### This repository has been archived; website has migrated to GitBook.
